@@ -10,3 +10,6 @@ There are many improvements that can be made.  I am make a system call to call m
 
 The call to mpg123 is much quicker than other music players.  Also, when implemented in python code, this seemed to queue the changes, and would play the sound file repeatedly.  In the C implementation, the file plays once, then only again when the beam is interrupted after that, which was the desired result.
 
+I purchased a set of Chamberlin garage door sensors from ebay for about 11 US dollars that included shipping.  I had the other parts for the Model 1B raspberry pi available.
+
+You could do the same with a pi zero, but you would need to add something like a https://www.adafruit.com/product/4037 Adafruit i2c sound bonnet to get sound through an AUX port.
