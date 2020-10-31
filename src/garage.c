@@ -42,8 +42,7 @@
 
 #define PIN 7 
 
-bool car;
-int carCounter = 0;
+bool creature;
 
 /*
  *
@@ -52,21 +51,16 @@ int carCounter = 0;
  */
 void handleInterrupt(int gpio, int level, uint32_t tick ){
   if(level == PI_TIMEOUT){
-    if(!car){
-      car = true;
-      //printf("Counter: %d\n", ++carCounter);
-      //char *binaryPath = "/usr/bin/mpg321";
-      //char *args[] = {binaryPath, "cougar.mp3"};
-      //execv(binaryPath, args);
+    if(!creature){
+      creature = true;
+      puts("Creature detected, make growl sound.");
       char command[50];
       strcpy(command, "mpg321 cougar.mp3");
       system(command);
     }
   }else{
-    if(car){
-      car = false;
-      //printf("no car present\n");
-      //This is where you would kill the mpg123 process.
+    if(creature){
+      creature = false;
     }
   }
 }
