@@ -13,3 +13,9 @@ The call to mpg123 is much quicker than other music players.  Also, when impleme
 I purchased a set of Chamberlin garage door sensors from ebay for about 11 US dollars that included shipping.  I had the other parts for the Model 1B raspberry pi available.
 
 You could do the same with a pi zero, but you would need to add something like a https://www.adafruit.com/product/4037 Adafruit i2c sound bonnet to get sound through an AUX port.
+
+Setup this up on porch as a scare-a-tron.  This required changing the value in gpioSetWatchdog(PIN, 8) from the value of 8ms to 20 ms. The current behavior with longer wires was a continued sound being made in the program as the alert was being triggered repeatedly.  Changeing the watchdog program to 20ms changed this so that a standard walking past the sensor with 8 foot wires worked correctly.
+
+Using two-line thermostat wire as it has a solid core and inexpensive.  Also, it can be found at home repair stores easily.  The wire also fits into a bread board.
+
+
