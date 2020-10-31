@@ -78,7 +78,7 @@ int main(int argc, char **argv) {
   }
   gpioInitialise();
   pinMode(PIN, INPUT);
-  gpioSetWatchdog(PIN, 8);
+  gpioSetWatchdog(PIN, 20);
   gpioSetAlertFunc(PIN, &handleInterrupt);
   
   while(1){
